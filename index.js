@@ -8,5 +8,7 @@ const client = new Client({
 })
 
 client.connect().then(()=> console.log("Connected Successfully")) //promise that gets fulfilled when client is connected
-.catch(e => console.error) // shows error if promise is rejected
+.then(()=> client.query("SELECT * FROM movies LIMIT 10"))
+.then(results => console.log(results.rows))
+.catch(e => console.log(e)) // shows error if promise is rejected
 .finally(()=> client.end)  //ends the connection 
