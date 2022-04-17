@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/zahrabeng/javascript-postgres#readme",
   "dependencies": {
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "pg": "^8.7.3"
   }
 }
