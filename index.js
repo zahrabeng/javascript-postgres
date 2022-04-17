@@ -4,8 +4,6 @@ require('dotenv').config();
 const client = new Client({
     user:"academy",
     password: process.env.password,
-    host: "linux",
-    port:5432,
     database: "omdb"
 })
 
