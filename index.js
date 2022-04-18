@@ -7,6 +7,8 @@ const client = new Client({
     database: "omdb"
 })
 
+//this method of connecting the client uses .then promise chaining 
+
 client.connect().then(()=> console.log("Connected Successfully")) //promise that gets fulfilled when client is connected
 .then(()=> client.query("SELECT * FROM movies WHERE kind=$1 LIMIT 10 ", ["movie"]))
 .then(results => console.log(results.rows))
